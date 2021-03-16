@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="add_options" />
+    <style name="address_options" />
+    <style name="cash_options" />
+    <style name="credit_card_options" />
+    <style name="date" />
+    <style name="default_credit_card_options" />
+    <style name="fragment_titles" />
+    <style name="order_option_express_delivery" />
+    <style name="order_options" />
+    <style name="order_status" />
+    <style name="rating" />
+</resources>

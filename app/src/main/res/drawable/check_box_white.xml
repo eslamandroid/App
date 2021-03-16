@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/colorPrimary" />
+                    <size android:height="25.0dip" android:width="25.0dip" />
+                </shape>
+            </item>
+            <item android:gravity="fill" android:drawable="@drawable/ic_check_rounded_edges" android:left="7.5dip" android:top="9.0dip" android:right="7.5dip" android:bottom="9.0dip" />
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size android:height="25.0dip" android:width="25.0dip" />
+            <solid android:color="#fff1f2f3" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="groupVisible"
+            type="Boolean" />
+        <variable
+            name="line"
+            type="Boolean" />
+
+        <variable
+            name="imgIcon"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="subTitle"
+            type="String" />
+
+        <variable
+            name="colorSubTitle"
+            type="Integer" />
+
+        <variable
+            name="btnVisible"
+            type="boolean" />
+
+        <variable
+            name="btnTitle"
+            type="String" />
+
+        <variable
+            name="switchBtn"
+            type="Boolean" />
+
+        <variable
+            name="addBtn"
+            type="Boolean" />
+
+        <variable
+            name="arrow"
+            type="Boolean" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+
+        android:visibility="@{groupVisible?View.VISIBLE:View.GONE}"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/icon"
+            fromDrawable="@{true}"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:src="@{imgIcon}"
+            android:gravity="start"
+            app:layout_constraintBottom_toBottomOf="@id/subTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/book"
+            android:text="@{title}"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toTopOf="@id/subTitle"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Title" />
+
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+             android:fontFamily="@font/bold"
+            android:lines="1"
+            android:text="@{subTitle}"
+            android:textColor="@color/coral_red"
+              android:textSize="12sp"
+            android:visibility="@{subTitle==null ?View.GONE :View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/line"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintVertical_chainStyle="packed"
+              />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/SwitchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:visibility="@{switchBtn?View.VISIBLE:View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sb_background="#fff1f2f3"
+            app:sb_checked="false"
+            app:sb_checked_color="#ff48b976"
+            app:sb_show_indicator="false"
+            app:sb_uncheck_color="@color/transparent" />
+
+
+        <TextView
+            android:id="@+id/changeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/medium"
+            android:text="@{btnTitle}"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:visibility="@{btnVisible?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/addBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="add Coupon or discount code"
+            android:src="@drawable/ic_add_address"
+            android:background="?selectableItemBackgroundBorderless"
+            android:visibility="@{addBtn?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageButton
+            android:id="@+id/goBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@color/transparent"
+            android:contentDescription="arrow go to"
+            android:rotation="180.0"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:visibility="@{arrow?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff2f1f1"
+            android:visibility="@{line?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="items">
+        <item quantity="other">%d منتج</item>
+        <item quantity="zero">لا يوجد منتجات</item>
+        <item quantity="one">منتج</item>
+        <item quantity="two">منتجان</item>
+        <item quantity="few">%d منتجات</item>
+        <item quantity="many">%d منتج</item>
+    </plurals>
+</resources>
