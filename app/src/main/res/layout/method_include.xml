@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/groupRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:weightSum=".1"
+        android:scrollbars="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:paddingEnd="5dp"
+
+            android:paddingStart="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+              android:button="@drawable/apple_method"
+            android:checked="false" />
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:button="@drawable/st_pay_method"
+            android:checked="false" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/visa"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:button="@drawable/mada_visa_method"
+            android:checked="false" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:button="@drawable/cash_method"
+            android:checked="false" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:button="@drawable/device_cash_method"
+            android:checked="false" />
+    </RadioGroup>
+</HorizontalScrollView>
